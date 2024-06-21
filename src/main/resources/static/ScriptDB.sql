@@ -51,6 +51,9 @@ CREATE TABLE local_cliente(
 	PRIMARY KEY(id_local, id_cliente)
 );
 INSERT INTO local_cliente(id_local, id_cliente) VALUES(1, 1);
+
+INSERT INTO gerente(nombre, apellido) VALUES('gerente q', 'q')
+
 SELECT * FROM local_cliente;
 
 TRUNCATE TABLE cliente RESTART IDENTITY;

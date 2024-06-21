@@ -26,6 +26,6 @@ public class Orden {
 
     @ManyToOne()
     @JoinColumn(name = "idLocal", referencedColumnName = "id_local")
-    @JsonManagedReference
+    @JsonBackReference
     private Local local;
 }

@@ -35,7 +35,7 @@ public class Local implements Serializable {
     private Gerente gerente;
 
     @OneToMany(mappedBy = "local", orphanRemoval = true)
-    @JsonBackReference
+    @JsonManagedReference
     private List<Orden> ordenes;
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -44,5 +44,6 @@ public class Local implements Serializable {
             joinColumns = @JoinColumn(name = "idLocal", referencedColumnName = "id_local"),
             inverseJoinColumns = @JoinColumn(name = "idCliente", referencedColumnName = "id_cliente")
     )
+    @JsonManagedReference
     private Set<Cliente> clientes;
 }

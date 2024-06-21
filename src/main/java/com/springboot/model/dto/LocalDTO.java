@@ -21,7 +21,8 @@ public class LocalDTO {
     private String piso;
 
     private GerenteDTO gerente;
-    @JsonBackReference
+
     private List<OrdenDTO> ordenes;
+
     private Set<ClienteDTO> clientes;
 }
